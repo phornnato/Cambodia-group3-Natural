@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings Cambodia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="G3.png">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Background image styling */
+        .background-image {
+            height: 100vh;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .slide {
+            background-size: cover;
+            background-attachment: fixed;
+            /* Fixes the background image */
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 4s;
+            animation-name: fade;
+            animation-duration: 4s;
+            transition: all 5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .7
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .7
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* Title overlay on the image */
+        .background-image .title {
+            position: absolute;
+            top: 80%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            font-size: 60px;
+            color: white;
+            font-family: "Rowdies", sans-serif;
+            font-weight: 700px;
+            font-style: normal;
+        }
+
+        .background-image .title p {
+            color: rgb(232, 222, 222);
+            text-shadow: 2px 5px 20px;
+            margin-bottom: 50px;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            display: flex;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 70px;
+            cursor: pointer;
+        }
+
+        .navbar a {
+            text-align: center;
+            font-size: 25px;
+            color: rgb(113, 106, 106);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+
+            font-size: 25px;
+            border: none;
+            outline: none;
+            color: rgb(113, 106, 106);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: rgba(33, 115, 255, 0.905);
+            transition: 0.6s;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e6e1e1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            transition: 0.6s;
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8d8d9386;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Content section */
+        .content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* PreahVihear */
+        .main-pic img {
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .temple-info {
+            /* max-width: 900px; */
+            margin: 0 auto;
+            /* background-color: #fff; */
+            padding: 20px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            border-radius: 5px;
+        }
+
+        .temple-info h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .temple-info p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .image-text {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .image-text img {
+            width: 50%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .image-text .text {
+            flex: 1;
+        }
+
+        .image-text .text p {
+            margin: 0 0 10px;
+            color: #555;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* map */
+        .container-map {
+            display: flex;
+            gap: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 0;
+            margin-left: 310px;
+            margin-right: 310px;
+            box-shadow: 10 10 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .map {
+            width: 600px;
+            height: 400px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .coordinates,
+        .distances {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .coordinates h3,
+        .distances h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .coordinates .p-map,
+        .distances .p-map {
+            margin: 5px 0;
+            font-size: 19px;
+        }
+
+        /* map */
+        .video {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        /* preahvihear */
+
+
+
+
+
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            text-align: left;
+        }
+
+        .title_p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            text-align: left;
+
+        }
+
+        .h2_witPHo {
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+        }
+
+        .container_footer {
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-inline: 15%;
+            background-color: rgba(0, 0, 0, 0.042);
+            color: rgb(0, 0, 0);
+            height: 300px;
+        }
+
+        .about-us-line1 h3,
+        .Natural-line1 h3 {
+            color: rgb(5, 5, 5);
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+
+        .about-us-line1 a,
+        .Natural-line1 a {
+            display: block;
+            color: rgb(0, 0, 0);
+            padding: 8px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .about-us-line1 a:hover,
+        .Natural-line1 a:hover {
+            color: #d900007d;
+
+        }
+
+        @media (max-width: 768px) {
+            .container_footer {
+                flex-direction: column;
+                padding-inline: 20px;
+                text-align: center;
+            }
+        }
+
+        .Natural-line1 .p_support,
+        .icon-support {
+            max-width: 200px;
+            margin-bottom: 15px;
+            padding: 8px;
+            color: rgb(6, 5, 5);
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background image with title -->
+   
+    <div class="background-image">
+        <div class="slide fade" style="background-image: url('https://thebettercambodia.com/wp-content/uploads/2022/07/cambodia-way-of-greeting-1.png');"></div>
+        <div class="slide fade" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Khmer_greeting.jpg');"></div>
+        <div class="slide fade" style="background-image: url('https://thebettercambodia.com/wp-content/uploads/2022/07/Cambodia-greeting-Children-showing-sampeah.png.webp');"></div>
+        <div class="slide fade" style="background-image: url('https://kampatour.com/pic/blog/images/image2(8).jpg');"></div>
+        <div class="slide fade" style="background-image: url('https://intocambodia.org/wp-content/uploads/2024/08/Sampeah.jpg');"></div>
+        <div class="slide fade" style="background-image: url('https://cdn.exoticvoyages.com/uploads/images/userfiles/2018/01/Apsara-SiemreapShuttle-6.jpg');"></div>
+        <div class="title">Cambodia Greeting
+            <p class="title_p">About Greeting Khmer People</p>
+        </div>
+    </div>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <img src="Kampuchea .png" class="logo" />
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <div class="dropbtn" style=" background-color: rgba(33, 115, 255, 0.905); color: white;" >Culture</div>
+            <div class="dropdown-content">
+            <a href="Religion.html" >Religion</a>
+            <a href="" style="background-color: #8d8d9386; color: white;">Greetings</a>
+            <a href="TraditionalArt.html">Traditional Art</a>
+            <a href="TraditionalFood.html">Traditional Food</a>
+            <a href="TraditionalMusic.html">Traditional Musics</a>
+            <a href="TraditionalClothes.html">Traditional Clothes</a>
+            <a href="TraditionalDancing.html">Traditional Dancing</a>
+            <a href="TraditionalWedding.html">Traditional Wedding</a>
+            <a href="TraditionalMedicines.html">Traditional Medicines</a>
+            <a href="TraditionalTransportation.html">Traditional Transportation</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+          <div class="dropbtn">Natural Beauty</div>
+          <div class="dropdown-content">
+            <a href="Kep.html">Kep</a>
+            <a href="BohKoh.html">BohKor</a>
+            <a href="Kampot.html">KamPot</a>
+            <a href="Chipart.html">Chipart</a>
+            <a href="KohTonsay.html">Koh Tonsay </a>
+            <a href="1500Mountain.html">1500 Mountain </a>
+            <a href="KohKongKrav.html">Koh Kong krav</a>
+            <a href="KampongSpue.html">Kampong Speu</a>
+            <a href="KulenNationalPark.html">Kulen National Park</a>
+            <a href="KnongSparMountain.html">Knong Psar Mountain</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropbtn">Tourism</div>
+          <div class="dropdown-content">
+            <a href="AngkorWat.html">Angkor Wat</a>
+            <a href="BayonTemple.html">Bayon Temple</a>
+            <a href="BakengHill.html">Bakheng Hill</a>
+            <a href="TapromTemple.html">Taprom Temple</a>
+            <a href="PreahKhanTemple.html">Preah Khan Temple</a>
+            <a href="PhimeanakasTemple.html">Phimeanakas Temple</a>
+            <a href="PreahVihearTemple.html">Preah Vihear Temple</a>
+            <a href="BanteaySreiTemple.html">Banteay Srei Temple</a>
+            <a href="SomboPreiKok.html">Sombo Prey Kok Temple</a>
+            <a href="BakseyChamkrong.html">Baksey Chamkrong Temple</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <a href="AboutUs.html">About Us</a>
+      </div>
+    <!-- Content section -->
+    <div class="content">
+      <div>
+          <h1 style="text-align: center; margin-top: 60px; font-size: 40px; font-family:fantasy;">Greeting Khmer People</h1>
+      </div>
+      <div class="main-pic">
+          <img src="https://scontent.fpnh5-6.fna.fbcdn.net/v/t39.30808-6/227309270_4226402410786298_3713542434337773224_n.jpg?stp=dst-jpg_p180x540&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHHPPPxCqvTiuhXuXllY5bAaGL5Ae_75QtoYvkB7_vlC5OjjiyqSFfno5DsDZ7CO-tebWzua8uTFaRos0Zb2pWn&_nc_ohc=AsMgc_5d4QsQ7kNvgFMIEhX&_nc_ht=scontent.fpnh5-6.fna&_nc_gid=A-j7MvTP5vRDQh6EwKBzO7L&oh=00_AYDXU4hbAw-j84L1BPvmaELY2umO_Nfv4CcWbM6TJ3dNOQ&oe=66D8F2FB" alt="">
+      </div>
+      <section class="temple-info">
+          <h1>Greeting</h1>
+
+          <p>
+            Cambodians traditionally greet each other with palms together, in a manner of prayer.
+            They lift up their hands to the chest level and bow slightly. This is called Som Pas.
+            In general, the higher the hands and lower the bow, the more respect is being shown. When meeting, Cambodians will Som Pas and say Choum Reap Sur (Hello). 
+            When departing, again they will Som Pas and say Choum Reap Lir(Goodbye). Cambodians use Som Pas for greeting and to display respect. When used for greeting, it would be impolite not to return a Som Pas; it is tantamount to rejecting an offered handshake in Western culture.
+          </p>
+
+          <p>
+            In Cambodia today, Western cultural influence is being accepted. 
+            Cambodian men often shake hands. Women, however, often adhere to the traditional greeting and are reluctant to shake hands, as Cambodians are not accustomed to touching, especially those of the opposite sex. 
+            In the U.S., many Cambodian women still are reluctant to shake hands, especially the older generation or new immigrants.
+          </p>
+
+            <!-- Image with Text Section -->
+            <div class="image-text">
+              <img src="https://intocambodia.org/wp-content/uploads/2024/08/Sampeah-1.jpg"
+                  alt="Preah Vihear Temple">
+              <div class="text">
+                  <p>
+                    In formal situation, Cambodians address people with Lok (Mr.) or Lok Srey (Mrs.) followed by his/her given name or both given and family name. 
+                    Rarely is the family name used by itself as Westerners do. For example, my name is Keo Mony. Keo is my family name and Mony my given name. 
+                    I will be addressed Mr. Mony. In the U.S., I am often addressed Mr. Keo. Some Cambodians consider using only the family name impolite as that was the name of the individual’s father, grandfather or ancestor.
+                    In an informal situation, Cambodians will refer to an older man as Ta (grandfather), Po (uncle) or Bang (brother) and to an older woman as Yeay (grandmother), Ming (aunt) or Bang Srey (sister). 
+                    They are also widely used in a situation where one is not sure the age of other parties, in deference to one who may be the senior. 
+                    In Cambodia, for a younger person to address an older individual without using a title would be considered rude or a form of misbehavior. For instance, a fifteen year-old boy will call his thirty year-old neighbor Sokha Po Sokha or Bang Sokha. People of the same age or younger can be called by their given name without the use of a title.
+                  </p>
+              </div>
+          </div>
+
+          <p>
+              From its location on top of the cliff the scenic view below stretches many kilometers across the plain.
+              The tradition has changed so that today, when people greet others in public they might use these titles to reflect differences in the social or professional class, and not only seniority or age. 
+              For example, older patients will often use one of these terms to greet their younger caseworker who is a professional at the hospital.
+          </p>
+      </section>
+      <h2>Some Picture of Khmer Greeting</h2>
+      <div class="image-gallery">
+          <img src="https://raymondcambodia.wordpress.com/wp-content/uploads/2013/07/obama.jpg?w=640"
+              alt="Temple Image 1">
+          <img src="https://www.exoticvoyages.com/uploads/images/userfiles/2018/01/New-Year-Festival-Vientiane-Capital-city-December-31-2016.jpg"
+              alt="Temple Image 2">
+          <img src="https://gdb.voanews.com/0d851560-be70-4049-8586-13fdeb2e5435_w1080_r0_s.jpg"
+              alt="Temple Image 3">
+          <img src="https://movetocambodia.com/wp-content/uploads/saying-hello-in-cambodian.jpg"
+              alt="Temple Image 4">
+          <img src="https://www.shutterstock.com/image-photo/thai-man-smiling-portrait-traditional-600nw-1954775917.jpg"
+              alt="Temple Image 5">
+          <img src="https://dmcmekongimage.com/wp-content/uploads/2022/10/greeting-of-cambodian-1024x686.jpg"
+              alt="Temple Image 6">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Khmer_greeting.jpg"
+              alt="Temple Image 6">
+          <img src="https://www.boreiangkor.com/wp-content/uploads/2023/12/srang-preah.jpg"
+              alt="Temple Image 6">
+      </div>
+      <div class="video">
+        <h2>The Video of Khmer Greeting</h2>
+        <iframe width="900px" height="500px" src="https://www.youtube.com/embed/nEq9LW-Szr8?si=oAyZv_Edmprju9B2"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>
+              In Khmer, the traditional greeting is “សួស្តី” (soursdey), which means “hello” or “good day.” To show respect, especially when greeting elders or people of higher status, you can also perform a gesture called the “sompeah,” where you place your palms together in a prayer-like position and bow slightly. 
+              The higher your hands are positioned and the deeper you bow, the more respect you are showing.
+            </p>
+    </div>
+  </div>
+
+    <footer class="footer_container">
+      <div class="container_footer">
+          <div class="about-us-line1">
+              <h3>Culture</h3>
+              <a href="Religion.html">Religion</a>
+              <a href="" style="color: #d900007d; ;">Greetings</a>
+              <a href="TraditionalArt.html">Traditional Art</a>
+              <a href="TraditionalFood.html">Traditional Food</a>
+              <a href="TraditionalMusic.html">Traditional Musics</a>
+             
+          </div>
+          <div class="Natural-line1">
+              <h3>Natural</h3>
+              <a href="1500Mountain.html">1500 Mountain </a>
+              <a href="KohKongKrav.html">Koh Kong krav</a>
+              <a href="KampongSpue.html">Kampong Speu</a>
+              <a href="KulenNationalPark.html">Kulen National Park</a>
+              <a href="KnongSparMountain.html"> Knong Psar Mountain</a>
+          </div>
+
+          <div class="Natural-line1">
+              <h3>Tourism</h3>
+              <a href="PreahKhanTemple.html">Preah Khan Temple</a>
+              <a href="PhimeanakasTemple.html">Phimeanakas Temple</a>
+              <a href="BanteaySreiTemple.html">Banteay Srei Temple</a>
+              <a href="SomboPreiKok.html">Sombo Prey Kok Temple</a>
+              <a href="BakseyChamkrong.html">Baksey Chamkrong Temple</a>
+          </div>
+
+          <div class="Natural-line1">
+              <h3>Support Us</h3>
+              <p class="p_support">you can suport us, actually we are approval the Ad on our website. if you are interest us please join us  <i class="fa fa-hand-o-down" aria-hidden="true"></i></p>
+              <p style="margin-left: 10px;"> <i class="fa fa-phone" aria-hidden="true"></i>  +855 : 0974303668</p>
+              <p style="margin-left: 10px;"> <i class="fa fa-telegram" aria-hidden="true"></i>  @Group3</p>
+          </div>
+      </div>
+  </footer>
+  <script>
+    
+    let slideIndex = 0;
+ showSlides();
+ 
+ function showSlides() {
+     let i;
+     let slides = document.getElementsByClassName("fade");
+     for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+     }
+     slideIndex++;
+     if (slideIndex > slides.length) {slideIndex = 1}    
+     slides[slideIndex-1].style.display = "block";  
+     setTimeout(showSlides, 5000); 
+ }
+ const hoverLinks = document.querySelectorAll('.hover-link');
+
+hoverLinks.forEach(link => {
+    const popupId = link.getAttribute('data-popup');
+    const popup = document.getElementById(popupId);
+
+    link.addEventListener('mouseover', () => {
+        document.querySelectorAll('.popup').forEach(p => p.classList.remove('active'));
+
+        const rect = link.getBoundingClientRect();
+        const popupRect = popup.getBoundingClientRect();
+
+        // Calculate available space
+        const spaceBelow = window.innerHeight - rect.bottom;
+        const spaceAbove = rect.top;
+        const spaceRight = window.innerWidth - rect.right;
+        const spaceLeft = rect.left;
+
+        // Position the popup based on available space
+        if (spaceBelow >= popupRect.height) {
+            popup.style.top = `${rect.bottom}px`;
+            popup.style.left = `${rect.left}px`;
+        } else if (spaceAbove >= popupRect.height) {
+            popup.style.top = `${rect.top - popupRect.height}px`;
+            popup.style.left = `${rect.left}px`;
+        } else if (spaceRight >= popupRect.width) {
+            popup.style.top = `${rect.top}px`;
+            popup.style.left = `${rect.right}px`;
+        } else if (spaceLeft >= popupRect.width) {
+            popup.style.top = `${rect.top}px`;
+            popup.style.left = `${rect.left - popupRect.width}px`;
+        } else {
+            
+            popup.style.top = `${rect.bottom}px`;
+            popup.style.left = `${rect.left}px`;
+        }
+
+        popup.classList.add('active');
+    });
+
+    link.addEventListener('mouseout', () => {
+        setTimeout(() => {
+            if (!popup.matches(':hover')) {
+                popup.classList.remove('active');
+            }
+        }, 200);
+    });
+
+    popup.addEventListener('mouseleave', () => {
+        popup.classList.remove('active');
+    });
+});
+
+   </script>
+  
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traditional Wedding</title>
+    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+   <link rel="icon" href="G3.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      /* Background image styling */
+      .background-image {
+        height: 100vh;
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      .slide {
+        background-size: cover;
+        background-attachment: fixed; /* Fixes the background image */
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 4s;
+        animation-name: fade;
+        animation-duration: 4s;
+        transition: all 5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.7;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.7;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Title overlay on the image */
+      .background-image .title {
+        position: absolute;
+        top: 80%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        font-size: 60px;
+        color: white;
+        font-family: "Rowdies", sans-serif;
+        font-weight: 700px;
+        font-style: normal;
+      }
+      .background-image .title p {
+        color: rgb(232, 222, 222);
+        text-shadow: 2px 5px 20px;
+        margin-bottom: 50px;
+      }
+
+      /* Navigation bar */
+      .navbar {
+        align-items: center;
+        background-color: white;
+        padding: 15px;
+        display: flex;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        width: 70px;
+        cursor: pointer;
+      }
+      .navbar a {
+        text-align: center;
+        font-size: 25px;
+        color: rgb(113, 106, 106);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 25px;
+        border: none;
+        outline: none;
+        color: rgb(113, 106, 106);
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        cursor: pointer;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: rgba(33, 115, 255, 0.905);
+        transition: 0.6s;
+        color: white;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #e6e1e1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        transition: 0.6s;
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #8d8d9386;
+        color: white;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Content section */
+      .content {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      /* h2 {
+            margin-top: 40px;
+            font-size: 32px;
+            color: #333;
+        } */
+
+      .content p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #666;
+        text-align: left;
+      }
+      .title_p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #666;
+        text-align: left;
+      }
+      img {
+        width: 100%
+      }
+
+      .h2_witPHo {
+        font-size: 40px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: left;
+      }
+      .container_footer {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 15%;
+        background-color: rgba(0, 0, 0, 0.042);
+        color: rgb(0, 0, 0);
+        height: 300px;
+      }
+      .about-us-line1 h3,
+      .Natural-line1 h3 {
+        color: rgb(5, 5, 5);
+        margin-bottom: 15px;
+        padding: 8px;
+      }
+
+      .about-us-line1 a,
+      .Natural-line1 a {
+        display: block;
+        color: rgb(0, 0, 0);
+        padding: 8px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .about-us-line1 a:hover,
+      .Natural-line1 a:hover {
+        color: #d900007d;
+      }
+      @media (max-width: 768px) {
+        .container_footer {
+          flex-direction: column;
+          padding-inline: 20px;
+          text-align: center;
+        }
+      }
+      .Natural-line1 .p_support,
+      .icon-support {
+        max-width: 200px;
+        margin-bottom: 15px;
+        padding: 8px;
+        color: rgb(6, 5, 5);
+        margin-bottom: 15px;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background image with title -->
+
+    <div class="background-image">
+      <div
+        class="slide fade"
+        style="
+          background-image: url('https://cambodiatravel.com/images/2020/10/Khmer-wedding22.jpg.webp');
+        "
+      ></div>
+      <div
+        class="slide fade"
+        style="
+          background-image: url('https://cambodiatravel.com/images/2020/10/Khmer-wedding20.jpg.webp');
+        "
+      ></div>
+      <div
+        class="slide fade"
+        style="
+          background-image: url('https://cambodiatravel.com/images/2020/10/Khmer-wedding19.jpg.webp');
+        "
+      ></div>
+      <div
+        class="slide fade"
+        style="
+          background-image: url('https://cambodiatravel.com/images/2020/10/Khmer-wedding14.jpg.webp');
+        "
+      ></div>
+      <div
+        class="slide fade"
+        style="
+          background-image: url('https://cambodiatravel.com/images/2020/10/Khmer-wedding18.jpg.webp');
+        "
+      ></div>
+      <div
+        class="slide fade"
+        style="
+          background-image: url('https://cambodiatravel.com/images/2020/10/Khmer-wedding17.jpg.webp');
+        "
+      ></div>
+      <div class="title">
+      Tranditional Wedding
+      <p class="title_p">
+        Our culture of wedding very strange and interest.
+      </p>
+      </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+      <img src="Kampuchea .png" class="logo" />
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <div
+          class="dropbtn"
+          style="background-color: rgba(33, 115, 255, 0.905); color: white"
+        >
+          Culture
+        </div>
+        <div class="dropdown-content">
+          <a href="Religion.html">Religion</a>
+          <a href="Greetings.html">Greetings</a>
+          <a href="TraditionalArt.html">Traditional Art</a>
+          <a href="TraditionalFood.html">Traditional Food</a>
+          <a href="TraditionalMusic.html">Traditional Musics</a>
+          <a href="TraditionalClothes.html">Traditional Clothes</a>
+          <a href="TraditionalDancing.html">Traditional Dancing</a>
+          <a href="" style="background-color: #8d8d9386; color: white"
+            >Traditional Wedding</a
+          >
+          <a href="TraditionalMedicines.html">Traditional Medicines</a>
+          <a href="TraditionalTransportation.html"
+            >Traditional Wedding</a
+          >
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">Natural Beauty</div>
+        <div class="dropdown-content">
+          <a href="Kep.html">Kep</a>
+          <a href="BohKoh.html">BohKor</a>
+          <a href="Kampot.html">KamPot</a>
+          <a href="Chipart.html">Chipart</a>
+          <a href="KohTonsay.html">Koh Tonsay </a>
+          <a href="1500Mountain.html">1500 Mountain </a>
+          <a href="KohKongKrav.html">Koh Kong krav</a>
+          <a href="KampongSpue.html">Kampong Speu</a>
+          <a href="KulenNationalPark.html">Kulen National Park</a>
+          <a href="KnongSparMountain.html">Knong Psar Mountain</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="dropbtn">Tourism</div>
+        <div class="dropdown-content">
+          <a href="AngkorWat.html">Angkor Wat</a>
+          <a href="BayonTemple.html">Bayon Temple</a>
+          <a href="BakengHill.html">Bakheng Hill</a>
+          <a href="TapromTemple.html">Taprom Temple</a>
+          <a href="PreahKhanTemple.html">Preah Khan Temple</a>
+          <a href="PhimeanakasTemple.html">Phimeanakas Temple</a>
+          <a href="PreahVihearTemple.html">Preah Vihear Temple</a>
+          <a href="BanteaySreiTemple.html">Banteay Srei Temple</a>
+          <a href="SomboPreiKok.html">Sombo Prey Kok Temple</a>
+          <a href="BakseyChamkrong.html">Baksey Chamkrong Temple</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+      <a href="AboutUs.html">About Us</a>
+    </div>
+
+    <!-- Content section -->
+    <div class="content">
+        <h1 style="text-align: center; margin-top: 60px; font-size: 40px; font-family:fantasy;">Wedding Ceremony in Cambodia</h1>
+      <!-- code -->
+      <img
+      src="https://cambodiatravel.com/images/2020/10/Khmer-wedding11.jpg.webp"
+      alt=""
+    />
+      <p>
+        Wedding ceremony in Cambodia may vary as between rural and urban areas,
+        from ancient time to modern days. But the special rules and many
+        traditional rituals are still preserved and respected by Khmer people,
+        which gives a unique and special charm to Cambodia wedding styles. Keep
+        on reading our article to have closer look to one of the most stunning
+        wedding culture in Southeast Asia.
+      </p>
+      <h2>Origin Of Khmer Wedding</h2>
+      <p>
+        Cambodian weddings traditionally lasts for three days and three nights.
+        Number “three” is considered to be an especially lucky number by
+        Cambodians because it’s associated with the “three jewels” of Buddhism:
+        the Buddha, brotherhood of monks – the Sangha, and the Buddha’s
+        teachings – the Dhamma. The Khmer wedding ceremony has been inspired by
+        the beautiful legend of the marriage of the first Khmer prince Preah
+        Thong and the Naga princess Neang Neak. Preah Thong was an Indian
+        prince, who set sails to the east to find his own land. One day, his
+        ship approached an island with full of animals and vegetation but no
+        other human inhabitants.<br /><br />
+        Therefore, he decided to moor the ship and got off to explore that
+        island. In a full moon night, Preah Thong accidentally caught a strange
+        sight, when the ocean’s surface suddenly rippled and there was a group
+        of people emerging from the under water. They were princess Neang Neak –
+        the daughter of the Naga King, and her maids and servants.<br /><br />
+        The prince and princess fell in love with each other at the first sight
+        and they went to Neang Neak’s underwater kingdom to ask permission from
+        her father. After the Naga King approved, a big wedding celebration was
+        held for three days and three nights. The king then used his magic power
+        to swallow the water to form the land that is now known as Cambodia and
+        presented it to the newlywed couple. From then, Preah Thong and Neang
+        Neak started to build their own kingdom and lived together happily ever
+        after. Many Khmer wedding customs and ceremonies are believed to be
+        influenced by the marriage of these two legendary persons.
+      </p>
+
+      <!-- image on right -->
+      <h2>Khmer Wedding Costumes</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding17.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        Silk is the material used in the Cambodian wedding clothing. The bride
+        wears a tube skirt with a fold in front, a bit similar to the skirt that
+        was popular around with a piece of cloth. The top of bridal clothing is
+        a tube top with a ribbon. Groom wears trousers in the Sampot – a piece
+        of cloth through the entangled pants.
+      </p>
+      <p style="text-align: justify">
+        There are many small ceremonies in the Khmer wedding so each ceremony
+        has its own color scheme. Consequently, groom and bride have to change
+        their outfits’ colors to match each ceremony. In addition, bride needs
+        to change her hairstyle and jewelry to elaborate with each ceremony. In
+        general, the couple is attired in matching opulent all-gold silk outfit
+        and have a wedding party of groomsmen and bridesmaids wearing
+        coordinating colors as well.
+      </p>
+      <h2>Traditional Khmer Wedding Ceremony</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding18.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        In the past, a traditional wedding in Cambodia is an intricate affair
+        that lasted three days and three nights. Nowadays most families reduce
+        the three-day and three-night event to a one-day and a half affair. But
+        none the less, newlyweds still show their respect to Cambodian culture
+        and valuable traditions and rituals are still maintained in contemporary
+        wedding ceremonies. It could take several months for the spouse and
+        their families to prepare for the wedding. Groom and bride take several
+        different outfits in their lifetime event.
+      </p>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding14.jpg.webp"
+        alt=""
+      />
+      <h2>Hai Goan Gomlom</h2>
+
+      <p style="text-align: justify">
+        Cambodian weddings begin with the groom and his family traveling to meet
+        the bride’s family, bearing gifts for dowry, such as: meats, fruits,
+        pastries, drinks and desserts. Guests are handed matching gold trays of
+        fruits and gifts as they arrive so they can join in the procession,
+        symbolic of his journey to the bride’s home. The trays will be arranged
+        on the table. Family members and friends are introduced, and wedding
+        rings will be exchanged.
+      </p>
+      <p style="text-align: justify">
+        <strong
+          >The presentation of dowry is illustrated by three traditional
+          songs:</strong
+        >
+      </p>
+      <p>
+        – Neay Pream He Kaun Kamlas: inform the arrival of the groom and his
+        family to the bride’s house.<br />
+        – Chambak Roy: the dowry gifts are officially presented by the bride’s
+        family to the bride’s family.<br />
+        – Pak Paeuk Pisa Sla: invite betel nut to the bride and groom’s elders.
+        In turn, bride and groom’s parents give blessings and well-wishes for
+        their children in new marriage life.
+      </p>
+      <h2>Sien Doan Taa</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding13.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        This step is called as Tea Ceremony, at which the bride and groom offer
+        tea to honor the spirits of their ancestors. It is a way for them to
+        honor those who have passed before them and to invite their spirit to
+        celebrate their wedding. It is a time to remember those near and dear to
+        their hearts and remember to include them in their important life
+        events.
+      </p>
+      <h2>Soat Mun</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding19.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        The ritual of monks’ blessing is carried out solemnly so the couple
+        remains quiet with their heads bowed and hands in payer. During this
+        ceremony, monks give special blessings for newlywed couple then
+        sprinkling them with flowered water.
+      </p>
+      <h2>Bang Chhat Madaiy</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding20.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        With the meaning of “holding umbrellas over parents”, this ceremony
+        expresses the couple’s gratitude to their parents. Parents have taken
+        care of them from childhood until mature time. Now they are grown up,
+        get married and take turn to shield and protect their parents. An
+        umbrella is held over the mother to symbolize a reversal in roles of the
+        protective of parents.
+      </p>
+      <h2>Hair Sork</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding21.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        Hair-cutting ceremony is a traditional rite in all Cambodian weddings.
+        Bridegroom’s hair was really cut in the old days but this ritual is done
+        symbolically nowadays. This cleansing ceremony represents the fresh
+        start to the couple’s new life together as husband and wife. Family
+        matriarch is the first person given the given the honor to do the
+        symbolic haircut for the couple. Then other relatives and close friends
+        will take turn to perform this ritual with blessings and well-wishes.
+      </p>
+      <h2>Sompeas Ptem</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding22.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        This is a special ceremony and most memorable stage of the wedding
+        because it symbolizes the new couple’s binding together, which is known
+        as knot tying. During this ceremony, the bride and groom will sit close
+        to each other, put their hands on a pillow and a gold sword is placed in
+        between their clasped hands. The officiants, family members and friends
+        will tie the bride and groom’s left and right wrists with red blessing
+        strings, as they wish the new couple health, happiness, and
+        prosperity.<br /><br />
+        The red strings are symbolic of two people coming together and their
+        everlasting love. The ceremony concludes with a shower of palm flowers
+        (pka sla) thrown over the new couple. At the end of the knot tying
+        ceremony, the couple will walk clockwise. The groom brandishes his sword
+        in his left hand in protection of his new bride and holds the sbay (part
+        of the Bride’s dress) in his right hand.
+      </p>
+      <h2>Bongvul Pbopul</h2>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding23.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        At this stage, married couples sit around the bride and groom in a
+        circle shape. Three lit candles are passed clockwise among these married
+        couples and rotated seven times. Any couple receiving the candles will
+        guide the smoke of the sacred flame over the bride and groom. This
+        ritual symbolizes the protection the newlywed from all evils.
+      </p>
+      <img
+        src="https://cambodiatravel.com/images/2020/10/Khmer-wedding24.jpg.webp"
+        alt=""
+      />
+      <p style="text-align: justify">
+        At the close of the colorful wedding ceremony, all of the guests are
+        invited to a sumptuous dinner later at night with more songs and dances
+        to entertain everyone. The traditional dishes range from fish, meat,
+        fruits, vegetables, and sweets.
+      </p>
+      <p style="text-align: justify">
+        The wedding is the most special and joyous event in Khmer people’s life.
+        Therefore, modern Cambodians try to maintain this tradition even though
+        it’s quite complicated and takes a lot of time and money.
+      </p>
+    </div>
+    <footer class="footer_container">
+      <div class="container_footer">
+        <div class="about-us-line1">
+          <h3>Culture</h3>
+          <a href="Religion.html">Religion</a>
+          <a href="Greetings.html">Greetings</a>
+          <a href="TraditionalArt.html">Traditional Art</a>
+          <a href="TraditionalFood.html">Traditional Food</a>
+          <a href="TraditionalMusic.html"> Traditional Musics</a>
+        </div>
+        <div class="Natural-line1">
+          <h3>Natural</h3>
+          <a href="1500Mountain.html">1500 Mountain </a>
+          <a href="KohKongKrav.html">Koh Kong krav</a>
+          <a href="KampongSpue.html">Kampong Speu</a>
+          <a href="KulenNationalPark.html">Kulen National Park</a>
+          <a href="KnongSparMountain.html"> Knong Psar Mountain</a>
+        </div>
+
+        <div class="Natural-line1">
+          <h3>Tourism</h3>
+          <a href="PreahKhanTemple.html">Preah Khan Temple</a>
+          <a href="PhimeanakasTemple.html">Phimeanakas Temple</a>
+          <a href="BanteaySreiTemple.html">Banteay Srei Temple</a>
+          <a href="SomboPreiKok.html">Sombo Prey Kok Temple</a>
+          <a href="BakseyChamkrong.html">Baksey Chamkrong Temple</a>
+        </div>
+
+        <div class="Natural-line1">
+          <h3>Support Us</h3>
+          <p class="p_support">
+            you can suport us, actually we are approval the Ad on our website.
+            if you are interest us please join us
+            <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+          </p>
+          <p style="margin-left: 10px">
+            <i class="fa fa-phone" aria-hidden="true"></i> +855 : 0974303668
+          </p>
+          <p style="margin-left: 10px">
+            <i class="fa fa-telegram" aria-hidden="true"></i> @Group3
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("fade");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000);
+      }
+      const hoverLinks = document.querySelectorAll(".hover-link");
+
+      hoverLinks.forEach((link) => {
+        const popupId = link.getAttribute("data-popup");
+        const popup = document.getElementById(popupId);
+
+        link.addEventListener("mouseover", () => {
+          document
+            .querySelectorAll(".popup")
+            .forEach((p) => p.classList.remove("active"));
+
+          const rect = link.getBoundingClientRect();
+          const popupRect = popup.getBoundingClientRect();
+
+          // Calculate available space
+          const spaceBelow = window.innerHeight - rect.bottom;
+          const spaceAbove = rect.top;
+          const spaceRight = window.innerWidth - rect.right;
+          const spaceLeft = rect.left;
+
+          // Position the popup based on available space
+          if (spaceBelow >= popupRect.height) {
+            popup.style.top = `${rect.bottom}px`;
+            popup.style.left = `${rect.left}px`;
+          } else if (spaceAbove >= popupRect.height) {
+            popup.style.top = `${rect.top - popupRect.height}px`;
+            popup.style.left = `${rect.left}px`;
+          } else if (spaceRight >= popupRect.width) {
+            popup.style.top = `${rect.top}px`;
+            popup.style.left = `${rect.right}px`;
+          } else if (spaceLeft >= popupRect.width) {
+            popup.style.top = `${rect.top}px`;
+            popup.style.left = `${rect.left - popupRect.width}px`;
+          } else {
+            popup.style.top = `${rect.bottom}px`;
+            popup.style.left = `${rect.left}px`;
+          }
+
+          popup.classList.add("active");
+        });
+
+        link.addEventListener("mouseout", () => {
+          setTimeout(() => {
+            if (!popup.matches(":hover")) {
+              popup.classList.remove("active");
+            }
+          }, 200);
+        });
+
+        popup.addEventListener("mouseleave", () => {
+          popup.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
